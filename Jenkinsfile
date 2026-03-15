@@ -15,4 +15,10 @@ pipeline {
             }
         }
     }
+
+    post {
+        success {
+            archiveArtifacts allowEmptyArchive: true, artifacts: '**/demo.war'
+        }
+    }
 }
